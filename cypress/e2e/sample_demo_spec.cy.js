@@ -4,7 +4,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 describe('Formulario Demo QA', () => {
   it('Llenar y validar formulario', () => {
-    cy.visit('https://demoqa.com/text-box')
+    cy.visit('https://demoqa.com/text-box', { timeout: 120000 })
     cy.get('#userName').type('Juan Perez')
     cy.get('#userEmail').type('juan@mail.com')
     cy.get('#currentAddress').type('Direccion actual')
